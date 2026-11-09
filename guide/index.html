@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Guide — MyCareRoster</title>
-  <meta name="description" content="How to use MyCareRoster for iPhone and iPad: set up your Medical contacts, family members, care teams, primary GPs, private profiles, and iCloud sync.">
+  <meta name="description" content="How to use MyCareRoster for iPhone and iPad: set up your Medical contacts, family members, care teams, primary GPs, appointments, pasted reminders, private profiles, and iCloud sync.">
   <link rel="canonical" href="https://mycareroster.com/guide/">
   <meta name="theme-color" content="#0a1729">
   <meta name="color-scheme" content="dark">
@@ -44,7 +44,7 @@
         <span class="eyebrow">Guide</span>
         <h1>Using MyCareRoster</h1>
         <p class="lead">Everything you need to set up and use MyCareRoster on iPhone and iPad.</p>
-        <p class="meta">For MyCareRoster 1.0.</p>
+        <p class="meta">For MyCareRoster 1.2.</p>
       </div>
 
       <div class="guide-layout">
@@ -58,6 +58,9 @@
             <li><a href="#care-teams">Care teams</a></li>
             <li><a href="#provider-details">A provider's details</a></li>
             <li><a href="#primary-gp">Primary GP</a></li>
+            <li><a href="#appointments">Appointments</a></li>
+            <li><a href="#paste-reminder">Pasting a reminder</a></li>
+            <li><a href="#paste-details">Pasting provider details</a></li>
             <li><a href="#staying-up-to-date">Keeping details up to date</a></li>
             <li><a href="#private-profiles">Private profiles</a></li>
             <li><a href="#icloud">iCloud and your other devices</a></li>
@@ -73,7 +76,7 @@
             <h2 id="h-getting-started">1. Getting started</h2>
 
             <h3>The sample family</h3>
-            <p>The first time you open MyCareRoster, it shows a sample family: June, Kate, and Isla. They're fictional, and they show how everything works before you add anyone of your own. Explore as much as you like. Nothing about them is saved or synced, their details can't be changed, and their phone numbers and email addresses don't call or email anyone. Their private profiles still ask for Face ID, Touch ID, or your passcode, so you can see how that works too.</p>
+            <p>The first time you open MyCareRoster, it shows a sample family: June, Kate, and Isla. They're fictional, and they show how everything works before you add anyone of your own. Explore as much as you like. Nothing about them is saved or synced, their details can't be changed, and their phone numbers, email addresses, and websites don't call, email, or open anything. Their appointments are samples too, and aren't in Calendar. Their private profiles still ask for Face ID, Touch ID, or your passcode, so you can see how that works too.</p>
             <p>When you're ready, tap <span class="ui">Turn Off Sample Data</span> on the Sample Family card at the top of the roster. You can bring the sample back at any time from Settings, with <span class="ui">Explore Sample Family</span>. Your own roster isn't changed, and it returns when you turn the sample off again.</p>
             <div class="tip">
               <p>Already using MyCareRoster on another device? If your roster is waiting in iCloud, the card says <span class="ui">Your roster is in iCloud</span>. Tap <span class="ui">Show My Roster</span>.</p>
@@ -87,17 +90,25 @@
               <li>Add your first family member (see <a href="#family-members">Family members</a>).</li>
             </ol>
             <p>If you turned Contacts access off, MyCareRoster shows <span class="ui">Contacts Access Is Off</span>. Tap <span class="ui">Open Settings</span> and allow access for MyCareRoster. If you have more than one list named Medical, keep only one, then refresh MyCareRoster.</p>
+            <p>If you allowed access to only some contacts, MyCareRoster can't see the rest of your Medical list. It says <span class="ui">Contacts access is limited</span> on the roster. Tap <span class="ui">Allow Full Access in Settings</span>, choose Contacts, then Full Access.</p>
           </section>
 
           <section id="finding-your-way" aria-labelledby="h-finding-your-way">
             <h2 id="h-finding-your-way">2. Finding your way around</h2>
             <p>The roster, titled <strong>Your care network</strong>, is home. It lists your family members and, once providers are in their teams, <span class="ui">All Providers</span>: everyone in every care team, in one alphabetical list.</p>
-            <p>The buttons at the top of the roster are <span class="ui">Add Family Member</span>, <span class="ui">Refresh</span>, which reads your Medical contacts again, and <span class="ui">Settings</span>.</p>
+            <p>The buttons at the top of the roster, from left to right, are:</p>
+            <ul>
+              <li><span class="ui">Paste Reminder</span>, for an appointment reminder when you're not sure which provider it's from (see <a href="#paste-reminder">Pasting a reminder</a>)</li>
+              <li><span class="ui">Add Family Member</span></li>
+              <li><span class="ui">Refresh</span>, which reads your Medical contacts again</li>
+              <li><span class="ui">Settings</span></li>
+            </ul>
+            <p>Each family member, care team, and team member has a <span class="ui">•••</span> button with the things you can do to it. You can also touch and hold the row.</p>
             <figure class="shot phone small">
               <img src="/assets/img/iphone-roster-400.webp"
                    srcset="/assets/img/iphone-roster-400.webp 400w, /assets/img/iphone-roster-800.webp 800w"
                    sizes="16rem" width="400" height="870" loading="lazy"
-                   alt="The roster, titled Your care network, with the Add Family Member, Refresh, and Settings buttons at the top, three family members, and All Providers.">
+                   alt="The roster, titled Your care network, with the Paste Reminder, Add Family Member, Refresh, and Settings buttons at the top, three family members, and All Providers.">
               <figcaption>The roster on iPhone</figcaption>
             </figure>
             <p>On iPhone, tap a family member to open their screen, and tap the back button to return. On iPad, and on the larger display of iPhone Duo, the roster stays beside whatever you open. The selected family member is highlighted, and you can hide the roster with the sidebar button.</p>
@@ -105,7 +116,7 @@
               <img src="/assets/img/ipad-team-thyroid-900.webp"
                    srcset="/assets/img/ipad-team-thyroid-900.webp 900w, /assets/img/ipad-team-thyroid-1600.webp 1600w"
                    sizes="(min-width: 52rem) 46rem, 100vw" width="900" height="675" loading="lazy"
-                   alt="MyCareRoster on iPad, with the roster on the left and a care team named Thyroid on the right.">
+                   alt="MyCareRoster on iPad, with the roster on the left and Kate's care team named Thyroid on the right.">
               <figcaption>On iPad, the roster stays in view</figcaption>
             </figure>
           </section>
@@ -120,7 +131,7 @@
             <p>Deleting a family member removes their teams from MyCareRoster. Providers and their Contacts cards are not deleted.</p>
             <p>A family member's screen shows, from the top:</p>
             <ul>
-              <li>their <strong>primary GP</strong>, with a button to call the practice (see <a href="#primary-gp">Primary GP</a>)</li>
+              <li>their <strong>primary GP</strong>, with their credentials, their practice, and a button to call them (see <a href="#primary-gp">Primary GP</a>)</li>
               <li>their <strong>private profile</strong> (see <a href="#private-profiles">Private profiles</a>)</li>
               <li>their <strong>care teams</strong>, with the number of team members in each</li>
             </ul>
@@ -129,26 +140,28 @@
               <img src="/assets/img/iphone-family-isla-400.webp"
                    srcset="/assets/img/iphone-family-isla-400.webp 400w, /assets/img/iphone-family-isla-800.webp 800w"
                    sizes="16rem" width="400" height="870" loading="lazy"
-                   alt="Isla's screen: her primary GP with a Call Reception button, her private profile, and her care teams.">
+                   alt="Isla's screen: her primary GP, Dr Tom Whitfield, with a Call Reception button, her private profile, and her care teams, Asthma &amp; Allergy and Dental.">
               <figcaption>A family member's screen</figcaption>
             </figure>
           </section>
 
           <section id="adding-providers" aria-labelledby="h-adding-providers">
             <h2 id="h-adding-providers">4. Adding providers</h2>
-            <p>Providers are the contacts in your Medical list: GPs, specialists, clinics, therapists, pharmacies, or anyone else involved in care. Add them from a family member's screen.</p>
+            <p>Providers are the contacts in your Medical list: GPs, specialists, clinics, therapists, pharmacies, or anyone else involved in care. Add them from a family member's screen or from one of their care teams.</p>
             <ol>
-              <li>Open the family member and tap <span class="ui">Add Provider</span>.</li>
-              <li>Under <strong>Medical contacts</strong>, tap a provider to add them to this family member's roster.</li>
+              <li>Open the family member and tap <span class="ui">Add Provider</span>, or open one of their teams and tap <span class="ui">Add Team Member</span>.</li>
+              <li>Under <strong>Medical contacts</strong>, tap a provider.</li>
             </ol>
-            <p>A provider added this way goes into a team named <strong>Other</strong>, which MyCareRoster creates if needed. To put them in the right team, open that team and use <span class="ui">Edit Team Members</span> (see <a href="#care-teams">Care teams</a>).</p>
+            <p>From a team, the provider joins that team. From the family member's screen, they go into a team named <strong>Other</strong>, which MyCareRoster creates if needed. To put them in the right team later, use the <span class="ui">•••</span> button beside them (see <a href="#care-teams">Care teams</a>).</p>
 
             <h3>Someone who isn't in your Medical list yet</h3>
             <p>In the Add Provider screen, tap the <span class="ui">+</span> button, then choose:</p>
             <ul>
-              <li><span class="ui">Add Existing Contact</span> to pick one or more people already in Contacts. MyCareRoster adds them to your Medical list and to this family member's roster.</li>
-              <li><span class="ui">Create Provider Contact</span> to make a new contact in Apple's contact editor. When you save it, it joins your Medical list, and you can then tap it in the list to add it to the roster.</li>
+              <li><span class="ui">Add Existing Contact</span> to pick one or more people already in Contacts.</li>
+              <li><span class="ui">Create Provider Contact</span> to make a new contact in Apple's contact editor.</li>
+              <li><span class="ui">Paste Provider Details</span> to start a new contact from details you've copied, such as a practice webpage or an email signature (see <a href="#paste-details">Pasting provider details</a>).</li>
             </ul>
+            <p>Either way, the contact joins your Medical list and this family member's roster, or the team you started from.</p>
             <div class="tip">
               <p>Contacts lists belong to one account, such as iCloud or Gmail. A contact stored in a different account from your Medical list can't join it, and MyCareRoster won't copy or duplicate it. Move or recreate the contact in the same account as the Medical list.</p>
             </div>
@@ -157,10 +170,11 @@
 
           <section id="care-teams" aria-labelledby="h-care-teams">
             <h2 id="h-care-teams">5. Care teams</h2>
-            <p>Care teams group the providers involved in one part of someone's care, such as Cardiology, Physio, or Rehabilitation. Each family member has their own teams, and the same provider can belong to as many teams as you like.</p>
+            <p>Care teams group the providers involved in one part of someone's care, such as Cardiology, Physio, or Rehabilitation. Each family member has their own teams, and the same provider can belong to as many teams as you like. The top of a team's screen shows whose team it is, such as <strong>Kate's care team</strong>.</p>
             <ul>
               <li><strong>Create a team:</strong> on the family member's screen, tap <span class="ui">New Team</span> and enter a name.</li>
-              <li><strong>Choose who's in it:</strong> open the team and tap <span class="ui">Edit Team Members</span>. Turn a provider on to add them, or off to remove them. Changes save as you go; tap <span class="ui">Done</span> when you're finished.</li>
+              <li><strong>Add team members:</strong> open the team and tap <span class="ui">Add Team Member</span> (see <a href="#adding-providers">Adding providers</a>).</li>
+              <li><strong>Move, copy, or remove a team member:</strong> tap the <span class="ui">•••</span> button beside them, or touch and hold their name. <span class="ui">Move to</span> and <span class="ui">Copy to</span> list this family member's other teams, then other family members' teams. <span class="ui">Remove from Team</span> takes them out of this team only; their notes, role, specialty, and other teams are kept.</li>
               <li><strong>Rename or delete a team:</strong> tap the <span class="ui">•••</span> button beside the team, or touch and hold it. On the team's own screen, use its <span class="ui">•••</span> menu.</li>
             </ul>
             <p>Deleting a team removes it from MyCareRoster. Providers and their Contacts cards are not deleted.</p>
@@ -168,48 +182,147 @@
               <img src="/assets/img/iphone-team-thyroid-400.webp"
                    srcset="/assets/img/iphone-team-thyroid-400.webp 400w, /assets/img/iphone-team-thyroid-800.webp 800w"
                    sizes="16rem" width="400" height="870" loading="lazy"
-                   alt="A care team named Thyroid with two team members, and the Edit Team Members and ••• buttons at the top.">
+                   alt="Kate's care team named Thyroid, with Dr Marcus Lee, endocrinology, and Dr Tom Whitfield, each with a ••• button, and the Add Team Member and ••• buttons at the top.">
               <figcaption>A care team</figcaption>
             </figure>
           </section>
 
           <section id="provider-details" aria-labelledby="h-provider-details">
             <h2 id="h-provider-details">6. A provider's details</h2>
-            <p>Tap a provider in a team, or in All Providers, to open their details.</p>
+            <p>Tap a provider in a team, or in All Providers, to open their details. At the top are their name, with any credentials (such as MBBS FRACGP) on a smaller line below it, their job title from Contacts, and their practice. Under those, MyCareRoster shows who they're the primary GP for, or their specialty.</p>
             <ul>
-              <li><strong>Get in touch:</strong> one button for each phone number and email address in their contact card, named with the card's labels, such as <span class="ui">Call Reception</span>. Tap to call or write an email.</li>
-              <li><strong>Practice &amp; location:</strong> their organization and suburb or city, and <span class="ui">Open in Contacts</span> to see or edit their full contact card. Changes you make there show in MyCareRoster when you close the card.</li>
-              <li><strong>Notes:</strong> type in <span class="ui">Add a note</span> and tap <span class="ui">Save Note</span>. Notes are private to MyCareRoster, and they're never written into Contacts. To change or delete a note, tap its <span class="ui">•••</span> button, or touch and hold it.</li>
-              <li><strong>Manage provider:</strong> set their <span class="ui">Role</span> to General Practitioner, Specialist, or Unclassified. For a specialist, enter their specialty and tap <span class="ui">Save Specialty</span>. It's shown under their name throughout the app.</li>
+              <li><strong>What the letters mean:</strong> tap to see what each credential after their name stands for. It also explains titles such as Professor, and why some surgeons are called Mr or Ms. Credentials are shown as written in Contacts; MyCareRoster doesn't check qualifications.</li>
+              <li><strong>Get in touch:</strong> calls first, then messaging apps, emails, and websites, named with the labels in their contact card, such as <span class="ui">Call Reception</span>. A mobile number has <span class="ui">Message</span> beside its call button. If their card has a WhatsApp, Signal, Telegram, or Messenger account, you can open a chat there.</li>
+              <li><strong>Locations:</strong> every address in their contact card, and <span class="ui">Open in Contacts</span> to see or edit their full card. Changes you make there show in MyCareRoster when you close the card.</li>
+              <li><strong>Appointments:</strong> their upcoming and past appointments in Calendar, with <span class="ui">Add Appointment</span> and <span class="ui">Paste</span> (see <a href="#appointments">Appointments</a>).</li>
+              <li><strong>Notes:</strong> type in <span class="ui">Add a note</span>. It saves when you tap <span class="ui">Done</span> or leave the field, and <span class="ui">Undo</span> takes it back. Notes are private to MyCareRoster, and they're never written into Contacts. To change or delete a note, tap its <span class="ui">•••</span> button, or touch and hold it.</li>
+              <li><strong>Manage provider:</strong> set their <span class="ui">Role</span> to General Practitioner, Specialist, or Unclassified. For a specialist, type their specialty. It saves on its own, with <span class="ui">Undo</span>, and is shown under their name throughout the app.</li>
+              <li><strong>Other contact details:</strong> fax and pager numbers, and anything else in their card that can't be called or opened. MyCareRoster never dials these. Tap the copy button beside one to paste it into a referral form.</li>
             </ul>
             <figure class="shot phone small">
-              <img src="/assets/img/iphone-provider-lee-400.webp"
-                   srcset="/assets/img/iphone-provider-lee-400.webp 400w, /assets/img/iphone-provider-lee-800.webp 800w"
+              <img src="/assets/img/iphone-gp-whitfield-400.webp"
+                   srcset="/assets/img/iphone-gp-whitfield-400.webp 400w, /assets/img/iphone-gp-whitfield-800.webp 800w"
                    sizes="16rem" width="400" height="870" loading="lazy"
-                   alt="A specialist's details: Call Reception and Email Reception buttons, Practice and location, and a note about blood tests.">
-              <figcaption>A specialist's details</figcaption>
+                   alt="Dr Tom Whitfield's details: MBBS FRACGP under his name, Practice Principal, Riverbend Medical Centre, Primary GP for Kate and Isla, What the letters mean, and Call Reception, Email Reception, and Website buttons.">
+              <figcaption>A GP's details</figcaption>
             </figure>
           </section>
 
           <section id="primary-gp" aria-labelledby="h-primary-gp">
             <h2 id="h-primary-gp">7. Primary GP</h2>
-            <p>Each family member can have one primary GP, shown at the top of their screen with a button to call the practice. The same GP can be primary for several family members.</p>
+            <p>Each family member can have one primary GP, shown at the top of their screen with a button to call them. The same GP can be primary for several family members.</p>
             <ol>
               <li>Make sure the GP is in at least one of the family member's care teams.</li>
               <li>Open the GP's details and, under <strong>Manage provider</strong>, set <span class="ui">Role</span> to <span class="ui">General Practitioner</span>.</li>
               <li>Turn on <span class="ui">Primary GP for</span> beside the family member's name. If someone else was their primary GP, the switch shows who it replaces.</li>
             </ol>
-            <p>To stop using a GP as primary, turn the same switch off. The call button uses the GP's first phone number and its label from Contacts, for example <span class="ui">Call Reception</span>.</p>
+            <p>To stop using a GP as primary, turn the same switch off. The call button uses the GP's first phone or mobile number (never a fax or pager) and its label from Contacts, for example <span class="ui">Call Reception</span>. If the number has no label, it says <span class="ui">Call GP</span>.</p>
+          </section>
+
+          <section id="appointments" aria-labelledby="h-appointments">
+            <h2 id="h-appointments">8. Appointments</h2>
+            <p>Appointments stay in Apple's Calendar app. MyCareRoster shows each provider's appointments on their screen and helps you add and update them, but it doesn't keep a copy of them.</p>
+
+            <h3>Adding an appointment</h3>
+            <ol>
+              <li>On the provider's screen, tap <span class="ui">Add Appointment</span>.</li>
+              <li>If this provider is in more than one family member's care teams, choose who it's for.</li>
+              <li>The first time, MyCareRoster asks for access to your calendars, and, if you have more than one, which calendar new appointments go in. You can change this later in Settings, under Appointments.</li>
+              <li>Choose where it is: one of the provider's addresses, <span class="ui">Phone Consultation</span>, <span class="ui">Video Consultation</span>, or <span class="ui">Somewhere Else</span> to type a place yourself.</li>
+              <li>Calendar's event editor opens, filled in with the provider's name and specialty (or GP), the location, and, if you have more than one family member, who it's for. Set the date and time, change anything else you like, and tap <span class="ui">Add</span>.</li>
+            </ol>
+            <p>MyCareRoster adds a link to the event, in its URL field or, if that's in use, its notes. The link is how MyCareRoster knows which provider the appointment is with.</p>
+
+            <h3>Seeing appointments</h3>
+            <p>A provider's screen lists their <strong>Upcoming</strong> and <strong>Past</strong> appointments from the last and next 12 months. Use <span class="ui">Show Earlier Appointments</span> or <span class="ui">Show Later Appointments</span> to look further. If MyCareRoster hasn't asked for Calendar access yet, tap <span class="ui">Show Appointments</span>. If Calendar access is off, tap <span class="ui">Open Settings</span> and allow it. MyCareRoster reads your calendars on this device; nothing is copied or uploaded.</p>
+            <p>Tap an appointment to see it, and change or delete it, without leaving MyCareRoster. Its <span class="ui">•••</span> button has <span class="ui">Show in Calendar</span>, which opens it in the Calendar app, and <span class="ui">Unlink</span> if it isn't with this provider after all.</p>
+
+            <h3>Appointments you added elsewhere</h3>
+            <p>An event that mentions the provider's surname but wasn't added through MyCareRoster is listed as a <strong>Possible match</strong>. If it's theirs, tap its <span class="ui">•••</span> button and choose <span class="ui">Link to</span> the provider. MyCareRoster asks who it's for and where it is, and if that changes the event's location, it asks you to confirm and adds a note of the earlier location to the event. After linking one, it offers to link other events like it.</p>
+            <p>If someone else sent you the event as an invitation, the other people invited may see the MyCareRoster link.</p>
+            <figure class="shot tablet">
+              <img src="/assets/img/ipad-appointments-900.webp"
+                   srcset="/assets/img/ipad-appointments-900.webp 900w, /assets/img/ipad-appointments-1600.webp 1600w"
+                   sizes="(min-width: 52rem) 46rem, 100vw" width="900" height="675" loading="lazy"
+                   alt="A GP's Appointments on iPad: an Add Appointment button, a Paste button for reminder or confirmation text, one upcoming appointment, and two past appointments, one of them a phone consultation.">
+              <figcaption>A provider's appointments</figcaption>
+            </figure>
+            <p>The sample family's appointments are samples to explore. They aren't in Calendar, and nothing is read from or written to Calendar while the sample family is shown.</p>
+          </section>
+
+          <section id="paste-reminder" aria-labelledby="h-paste-reminder">
+            <h2 id="h-paste-reminder">9. Pasting a reminder</h2>
+            <p>When a practice sends an appointment reminder, booking confirmation, change, or cancellation by text message or email, MyCareRoster can read it and update Calendar for you.</p>
+            <ol>
+              <li>In Messages, WhatsApp, Mail, or wherever it arrived, copy the whole message.</li>
+              <li>On the provider's screen, tap <span class="ui">Paste</span> beside <strong>Reminder or confirmation text</strong>. If you're not sure which provider it's from, tap <span class="ui">Paste Reminder</span> at the top of the roster instead.</li>
+              <li>Check what MyCareRoster found, then choose what to do.</li>
+            </ol>
+            <p>MyCareRoster reads the clipboard only when you tap Paste, and it doesn't keep the message.</p>
+
+            <h3>Who it's from</h3>
+            <p>When you paste from the roster, MyCareRoster suggests providers whose name or practice is in the message. It never matches by phone number or email address. You can also choose someone in Contacts who isn't in your Medical list yet (they're added to it), create a new contact from the message, or search all your providers.</p>
+
+            <h3>Checking the details</h3>
+            <p>The review shows what kind of message it is, such as a reminder, a cancellation notice, or an appointment that moved, with the date and time it found. It warns you when a date could be read two ways, or has already passed, and lets you set the date if the message doesn't give one. If the provider is in more than one family member's care teams, choose who the appointment is for.</p>
+            <p>Choose the location from the provider's addresses in Contacts, an address in the message, or <span class="ui">Phone Consultation</span> or <span class="ui">Video Consultation</span>. For a video consultation, you can add the message's video link to the event's notes after checking its address.</p>
+
+            <h3>Updating Calendar</h3>
+            <ul>
+              <li><strong>A new appointment:</strong> <span class="ui">Add to Calendar</span> opens Calendar's event editor, filled in.</li>
+              <li><strong>A moved appointment:</strong> if there's already an appointment with the provider nearby, MyCareRoster suggests moving it instead, so Calendar doesn't keep both. <span class="ui">Update Appointment</span> shows the time and location now and after, for you to confirm.</li>
+              <li><strong>A cancellation:</strong> <span class="ui">Delete from Calendar</span> finds the appointment and asks before deleting it.</li>
+            </ul>
+            <p>Nothing changes in Calendar until you confirm.</p>
+
+            <h3>Replying, calling, and links</h3>
+            <p>MyCareRoster can't send replies. If the message says, for example, to reply Y to confirm, it shows what to reply, and you reply in the app the message came in. If it asks you to call, MyCareRoster offers to call the number, and adds a note of the call to the appointment.</p>
+            <div class="tip">
+              <p>Scam messages often copy appointment reminders. MyCareRoster shows a link's full address and asks before opening it or adding it to an event. Only open links you expect from that practice.</p>
+            </div>
+            <p>If the message gives the provider's name more fully than Contacts does, such as a middle name or a title, MyCareRoster offers <span class="ui">Update the Name in Contacts</span>. Only the title and names change, and a middle name the message leaves out is kept.</p>
+          </section>
+
+          <section id="paste-details" aria-labelledby="h-paste-details">
+            <h2 id="h-paste-details">10. Pasting provider details</h2>
+            <p>Start a new provider contact from details you've copied, instead of typing them in.</p>
+            <ol>
+              <li>Copy the provider's details from a practice webpage, an email signature, or a contact card. For a business card, open it in Camera or Photos, touch and hold the card's text, then tap Copy.</li>
+              <li>Open a family member or team, tap <span class="ui">Add Provider</span> or <span class="ui">Add Team Member</span>, tap <span class="ui">+</span>, then choose <span class="ui">Paste Provider Details</span>.</li>
+              <li>Tap <span class="ui">Paste</span>. If the text names several people, choose the one to add.</li>
+              <li>Check the details. You can change the title, names, credentials, specialty, department, role, and practice, and choose which phone numbers, email addresses, addresses, and websites to include. Practices often share phone numbers and emails between providers, so include only the ones you want on this contact.</li>
+              <li>Tap <span class="ui">Continue in Contacts</span>. Apple's contact editor opens, filled in, so you can check everything before it's saved. Tap <span class="ui">Done</span>.</li>
+            </ol>
+            <p>The new contact is added to your Medical list and to the family member's roster, or to the team. MyCareRoster doesn't keep the pasted text.</p>
+
+            <h3>When the provider is already in Contacts</h3>
+            <p>If a contact with the same name exists, MyCareRoster offers it under <strong>Already in Contacts?</strong>, so you don't create a duplicate. Tap <span class="ui">Use</span> to add it as it is, or <span class="ui">Update with Pasted Details</span> to choose what to change. Adding something new starts turned on; replacing something already on the contact starts off. Nothing is removed, and nothing is saved until you confirm.</p>
+
+            <h3>Credentials and specialty</h3>
+            <p>Credentials, such as MBBS FRACGP, are saved in the contact's Suffix field. MyCareRoster keeps the specialty for the provider, and in Contacts it's saved as the contact's job title unless you enter a role.</p>
           </section>
 
           <section id="staying-up-to-date" aria-labelledby="h-staying-up-to-date">
-            <h2 id="h-staying-up-to-date">8. Keeping details up to date</h2>
-            <p>Phone numbers, email addresses, organizations, and locations always come from Contacts. Update a provider's card in Contacts, then tap <span class="ui">Refresh</span> on the roster to see the change. MyCareRoster also reads your Medical list whenever it starts up. Your roles, specialties, notes, teams, and primary GP choices stay as they are.</p>
-            <p>If a provider is removed from your Medical list, or their contact is deleted, MyCareRoster keeps their notes and settings for you to review but hides their contact details and removes them from All Providers. If they're added back to Medical, everything returns after a refresh.</p>
+            <h2 id="h-staying-up-to-date">11. Keeping details up to date</h2>
+            <p>Names, credentials, job titles, phone numbers, email addresses, websites, organizations, and addresses always come from Contacts. Update a provider's card in Contacts, then tap <span class="ui">Refresh</span> on the roster to see the change. MyCareRoster also reads your Medical list whenever it starts up. Your roles, specialties, notes, teams, and primary GP choices stay as they are.</p>
+
+            <h3>Fields Contacts may hide</h3>
+            <p>MyCareRoster reads a provider's title (Prefix), middle name, credentials (Suffix), job title, and department. Contacts doesn't always show the Suffix and Job Title fields, but you can add them. Credentials in the Suffix field are what <strong>What the letters mean</strong> explains, and they keep providers sorted by surname.</p>
+            <ul>
+              <li><strong>iPhone and iPad:</strong> open the contact, tap Edit, scroll near the bottom, and tap Add Field. The list offers only the fields the card isn't already showing.</li>
+              <li><strong>Mac:</strong> in Contacts, choose Contacts &gt; Settings &gt; Template, then use Add Field to choose a field, such as Suffix or Job Title. The template sets which fields every card shows.</li>
+            </ul>
+
+            <h3>When a provider leaves your Medical list</h3>
+            <p>If a provider is removed from your Medical list, or their contact is deleted, MyCareRoster keeps their notes and settings but hides their contact details and removes them from All Providers. In their teams, they're marked <strong>Not in your Medical list</strong>. Tap the <span class="ui">•••</span> button beside them:</p>
+            <ul>
+              <li><span class="ui">Repair</span> offers <span class="ui">Add Back to Medical</span> if their contact is still in Contacts, or <span class="ui">Choose a Different Contact</span>. Their notes, role, specialty, and teams are kept.</li>
+              <li><span class="ui">Remove from Team</span> takes them out of that team. Their contact isn't deleted.</li>
+            </ul>
           </section>
 
           <section id="private-profiles" aria-labelledby="h-private-profiles">
-            <h2 id="h-private-profiles">9. Private profiles</h2>
+            <h2 id="h-private-profiles">12. Private profiles</h2>
             <p>Each family member has a private profile for the details forms and clinics ask for. Open it from the family member's screen, then tap <span class="ui">Authenticate to View Profile</span> and use Face ID, Touch ID, or your passcode.</p>
 
             <h3>What a profile holds</h3>
@@ -234,7 +347,7 @@
             </figure>
 
             <h3>Hidden numbers</h3>
-            <p>Credential numbers are hidden until you turn on <span class="ui">Show credential values</span>, which asks for Face ID, Touch ID, or your passcode again.</p>
+            <p>Credential numbers are hidden until you turn on <span class="ui">Show credential values</span>. If the profile has been open for more than five minutes, it asks for Face ID, Touch ID, or your passcode again first.</p>
 
             <h3>Staying locked</h3>
             <p>An unlocked profile stays open for five minutes. After that, revealed numbers hide again, and MyCareRoster asks you to authenticate before you open, change, or copy anything more. Anything you're typing in an editor is kept. Numbers also hide as soon as you leave the app, and an open section is covered in the app switcher. It's locked again each time you open it.</p>
@@ -242,15 +355,16 @@
           </section>
 
           <section id="icloud" aria-labelledby="h-icloud">
-            <h2 id="h-icloud">10. iCloud and your other devices</h2>
-            <p>Your roster of family members, care teams, roles, notes, and primary GPs syncs automatically between your iPhone and iPad through your private iCloud account. It's encrypted on your device first, with a key kept in iCloud Keychain, so iCloud holds only encrypted data.</p>
-            <p>To sync, sign in to the same Apple Account on each device, with iCloud and iCloud Keychain (Passwords and Keychain) turned on. Phone numbers, email addresses, and addresses aren't copied between devices: each device reads them from its own Contacts, so your Medical list needs to be on each device too, for example through iCloud Contacts.</p>
+            <h2 id="h-icloud">13. iCloud and your other devices</h2>
+            <p>Your roster of family members, care teams, roles, specialties, notes, and primary GPs syncs automatically between your iPhone and iPad through your private iCloud account. It's encrypted on your device first, with a key kept in iCloud Keychain, so iCloud holds only encrypted data. Only providers you've set up are included: those in a team, chosen as a primary GP, given a role, specialty, or note, or reconnected to a contact.</p>
+            <p>To sync, sign in to the same Apple Account on each device, with iCloud and iCloud Keychain (Passwords and Keychain) turned on. Contact details aren't copied between devices: each device reads them from its own Contacts, so your Medical list needs to be on each device too, for example through iCloud Contacts. So that your devices can match providers, the encrypted roster includes their names and organizations, and a one-way fingerprint (a hash) of their phone numbers and email addresses. See the <a href="/privacy/">Privacy Policy</a>.</p>
 
             <h3>Setting up a new device</h3>
             <p>A new device may need a moment for iCloud Keychain to deliver the encryption key. If your teams haven't appeared, tap <span class="ui">Sync saved care teams</span> or <span class="ui">Refresh</span>. If a private profile says <span class="ui">Waiting for iCloud Keychain</span>, check that iCloud Keychain is on, keep the device online and unlocked for a few minutes, and tap <span class="ui">Try Again</span>.</p>
 
             <h3>Providers to reconnect</h3>
-            <p>If MyCareRoster can't be sure which contact on this device matches a provider saved on another device, it lists them under <span class="ui">Providers to reconnect</span>. Tap one, choose the same person from your Medical contacts, and confirm with <span class="ui">Connect Same Provider</span>. Their notes, role, and teams are restored. Nothing is matched until you confirm.</p>
+            <p>If MyCareRoster can't be sure which contact on this device matches a provider saved on another device, it lists them under <span class="ui">Providers to reconnect</span>. Tap one and choose the same person. Similar names in your Medical list are shown first; contacts outside it are listed under <strong>In Contacts, Not in Medical</strong>, or tap <span class="ui">Choose in Contacts…</span>. Confirm with <span class="ui">Connect Same Provider</span>, or <span class="ui">Add to Medical and Connect</span> for a contact outside your Medical list. Their notes, role, and teams are restored. Nothing is matched until you confirm.</p>
+            <p>If they're no longer needed, use their <span class="ui">•••</span> button and choose <span class="ui">Remove from All Teams</span>. Their contact isn't deleted.</p>
 
             <h3>Syncing private profiles</h3>
             <p>Private profiles don't sync unless you choose to. To open them on your other devices, turn on <span class="ui">Sync with iCloud</span> in Settings, under Private Profiles, on each device. They're encrypted on the device before they're stored in iCloud.</p>
@@ -258,38 +372,41 @@
           </section>
 
           <section id="unlimited" aria-labelledby="h-unlimited">
-            <h2 id="h-unlimited">11. Free version and MyCareRoster Unlimited</h2>
+            <h2 id="h-unlimited">14. Free version and MyCareRoster Unlimited</h2>
             <p>The free version never expires. It includes:</p>
             <ul>
               <li>one family member</li>
               <li>two care teams</li>
               <li>three providers across those teams (a provider in more than one team counts once)</li>
             </ul>
-            <p>Private profiles, notes, and encrypted iCloud sync are included free.</p>
+            <p>Private profiles, notes, appointments, pasting, and encrypted iCloud sync are included free.</p>
             <p><strong>MyCareRoster Unlimited</strong> removes the limits on family members, care teams, and providers. It's a one-time purchase, not a subscription, and works on all your devices signed in to the same App Store account. When you reach a limit, MyCareRoster tells you which one and offers <span class="ui">See MyCareRoster Unlimited</span>. You can also find it in Settings, under Purchases.</p>
+            <p>If adding a provider from a family member's screen would need a new Other team and there's no room for one, MyCareRoster asks which of their teams to add them to instead.</p>
             <p>To restore your purchase on a new device, sign in with the same App Store account and tap <span class="ui">Restore Purchases</span> in Settings or on the MyCareRoster Unlimited screen.</p>
           </section>
 
           <section id="settings" aria-labelledby="h-settings">
-            <h2 id="h-settings">12. Settings</h2>
+            <h2 id="h-settings">15. Settings</h2>
             <p>Tap <span class="ui">Settings</span> on the roster.</p>
             <ul>
               <li><strong>Sample Family:</strong> <span class="ui">Explore Sample Family</span> or <span class="ui">Turn Off Sample Data</span>.</li>
               <li><strong>Private Profiles:</strong> <span class="ui">Sync with iCloud</span>.</li>
+              <li><strong>Contacts:</strong> whether MyCareRoster has full, limited, or no access to Contacts, with a button to change it in the Settings app.</li>
+              <li><strong>Appointments:</strong> <span class="ui">Calendar for New Appointments</span>, the calendar Add Appointment uses. Choose <span class="ui">Calendar's Default</span> or any calendar you can add events to. This choice is kept on this device only, and you can still pick another calendar in the event editor.</li>
               <li><strong>Purchases:</strong> your MyCareRoster Unlimited status, <span class="ui">See MyCareRoster Unlimited</span>, and <span class="ui">Restore Purchases</span>.</li>
               <li><strong>About:</strong> the version, <span class="ui">Privacy Policy</span>, <span class="ui">Support</span>, <span class="ui">Rate MyCareRoster</span>, and <span class="ui">Send Feedback</span>, which opens an email to us. Please don't include health details or identifiers.</li>
             </ul>
           </section>
 
           <section id="deleting" aria-labelledby="h-deleting">
-            <h2 id="h-deleting">13. Deleting your information</h2>
+            <h2 id="h-deleting">16. Deleting your information</h2>
             <p>Deleting MyCareRoster from a device removes what it stored on that device. Copies in iCloud remain until you remove them.</p>
             <p>MyCareRoster's Diagnostics section has tools for this. To show it, open Settings and tap the version number seven times. To hide it again, tap the lock icon beside the version.</p>
             <ul>
               <li><span class="ui">Delete from iCloud</span> removes the encrypted iCloud copy of your roster, your private profiles, or both. This device keeps its own copy and stops syncing it until you tap <span class="ui">Resume iCloud Uploads</span> or hide Diagnostics.</li>
               <li><span class="ui">Delete Everything</span> permanently deletes every family member, team, provider setting, note, and private profile from iCloud and this device, along with the encryption keys. Delete MyCareRoster from your other devices first, or they'll upload their copy again.</li>
             </ul>
-            <p>Both ask for Face ID, Touch ID, or your passcode. Neither changes your contacts, which stay in Contacts.</p>
+            <p>Both ask for Face ID, Touch ID, or your passcode. Neither changes your contacts, which stay in Contacts, or your appointments, which stay in Calendar.</p>
             <p>Diagnostics also has <span class="ui">Support Info</span>, which we may ask you to copy into an email if you need help. See <a href="/support/">Support</a>.</p>
 
             <p class="back-to-top"><a href="#top">Back to top</a></p>
