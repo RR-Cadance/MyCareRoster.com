@@ -11,7 +11,7 @@ fonts, scripts, analytics, or cookies. `.nojekyll` stops GitHub from running Jek
 | URL | File | Notes |
 |---|---|---|
 | `/` | `index.html` | Home |
-| `/guide/` | `guide/index.html` | User guide. Describes version 1.2 (build 24). |
+| `/guide/` | `guide/index.html` | User guide. Describes version 1.3 (build 39). |
 | `/support/` | `support/index.html` | Contact and FAQ |
 | `/privacy/` | `privacy/index.html` | Privacy policy for the app and this website |
 | — | `404.html` | Served by GitHub Pages for missing pages |
@@ -27,8 +27,10 @@ Styles live in `assets/css/site.css`, with colours from the app's `CarePalette`.
   source. Don't name calendar services (Google, Exchange, and so on) or claim every calendar
   works until that's tested.
 - **Support email:** `support@mycareroster.com` (needs Cloudflare Email Routing).
-  The app's `CareWebLinks` (1.2) still points to `cadance.music/mycareroster/*`, which
-  redirect here, and `info@cadance.music`, until the app is updated.
+  From 1.3 the app's `CareWebLinks` opens `https://mycareroster.com/privacy/` and
+  `/support/` directly. Versions 1.0 to 1.2.1 still open `cadance.music/mycareroster/*`,
+  which redirect here, so keep those redirects. The app's Send Feedback still emails
+  `info@cadance.music` (`CareWebLinks.supportEmail`) until the app is updated.
 - **App Store link:** `https://apps.apple.com/app/id6816753619`.
 - **Smart App Banner:** every page's `<head>` has
   `<meta name="apple-itunes-app" content="app-id=6816753619">`, which shows Apple's
@@ -42,8 +44,8 @@ Styles live in `assets/css/site.css`, with colours from the app's `CarePalette`.
 
 ## Images
 
-- Screenshots in `assets/img/*.webp` are the 1.2 raw captures in the app repo's
-  `AppStoreScreenshots/1.2-captures/` (sample family only), resized with
+- Screenshots in `assets/img/*.webp` are the 1.3 raw captures in the app repo's
+  `AppStoreScreenshots/1.3-captures/` (sample family only), resized with
   `cwebp -q 80 -m 6 -resize`: iPhone 6.3 to 400 × 870 and 800 × 1740, iPad 13 to
   900 × 675 and 1600 × 1200.
 - Icons: export a 1024 × 1024 PNG from Icon Composer to `assets/icon-1024.png`, then run
