@@ -11,7 +11,7 @@ fonts, scripts, analytics, or cookies. `.nojekyll` stops GitHub from running Jek
 | URL | File | Notes |
 |---|---|---|
 | `/` | `index.html` | Home |
-| `/guide/` | `guide/index.html` | User guide. Describes version 1.3 (build 39). |
+| `/guide/` | `guide/index.html` | User guide. Describes version 1.6 (build 44). |
 | `/support/` | `support/index.html` | Contact and FAQ |
 | `/privacy/` | `privacy/index.html` | Privacy policy for the app and this website |
 | — | `404.html` | Served by GitHub Pages for missing pages |
@@ -44,10 +44,25 @@ Styles live in `assets/css/site.css`, with colours from the app's `CarePalette`.
 
 ## Images
 
-- Screenshots in `assets/img/*.webp` are the 1.3 raw captures in the app repo's
-  `AppStoreScreenshots/1.3-captures/` (sample family only), resized with
-  `cwebp -q 80 -m 6 -resize`: iPhone 6.3 to 400 × 870 and 800 × 1740, iPad 13 to
-  900 × 675 and 1600 × 1200.
+- Screenshots in `assets/img/*.webp` show the sample family in Teal, Dark (the default).
+  iPhone images are 1.6 (build 44) captures from an iPhone 18 Pro simulator, made with the
+  app repo's `scripts/capture-screenshots.sh` (`--theme teal --appearance dark`); iPad images
+  are the 1.4 raw captures in `AppStoreScreenshots/1.4-captures/iPad-13/`, which still match
+  1.6 for the screens used. Resized with `cwebp -q 80 -m 6 -resize`: iPhone 6.3 to
+  400 × 870 and 800 × 1740, iPad 13 to 900 × 675 and 1600 × 1200.
+- | Image | Capture |
+  |---|---|
+  | `iphone-roster` | `-screen home` |
+  | `iphone-family-kate`, `iphone-family-isla` | `-screen family`, `--member kate` / `isla` |
+  | `iphone-team-thyroid` | `-screen team --member kate --team Thyroid` |
+  | `iphone-gp-whitfield` | `-screen provider --member kate` |
+  | `iphone-profile-locked`, `iphone-profile-conditions` | `-screen locked` / `conditions`, `--member june` |
+  | `iphone-member-appointments` | `-screen memberappointments --member kate` |
+  | `iphone-summary` | `-screen summaryhealth --member kate` |
+  | `iphone-theme`, `iphone-icon` | `-screen theme` / `icon`, `--member june` |
+  | `ipad-team-thyroid`, `ipad-appointments`, `ipad-provider-lee` | 1.4 iPad `03-team`, `07-appointments`, `09-provider` |
+- `assets/img/og-card.png` embeds `iphone-roster-800.webp`; rerun `tools/make-og-card.sh`
+  when that image changes.
 - Icons: export a 1024 × 1024 PNG from Icon Composer to `assets/icon-1024.png`, then run
   `tools/make-icons.sh` and `tools/make-og-card.sh`.
 
