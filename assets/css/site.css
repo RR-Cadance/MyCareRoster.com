@@ -434,6 +434,8 @@ strong { color: var(--text); }
 .footer-nav li + li { margin-top: 0; }
 .footer-nav a { color: var(--text-2); }
 .site-footer p { margin: 0; }
+.site-footer .footer-badge { margin-top: 1rem; }
+.footer-badge a { display: inline-block; }
 .legal { font-size: 0.85rem; }
 
 /* ---------- Wider screens ---------- */

@@ -61,6 +61,9 @@ Styles live in `assets/css/site.css`, with colours from the app's `CarePalette`.
   | `iphone-summary` | `-screen summaryhealth --member kate` |
   | `iphone-theme`, `iphone-icon` | `-screen theme` / `icon`, `--member june` |
   | `ipad-team-thyroid`, `ipad-appointments`, `ipad-provider-lee` | 1.4 iPad `03-team`, `07-appointments`, `09-provider` |
+- `assets/img/premium-app-drops-badge.svg` is the footer's Premium App Drops badge, copied from
+  `https://premiumappdrops.com/badge/mycareroster-health-care-vault-2026-11-27-1a4b.svg` and
+  served locally so visitors' browsers don't contact a third party (see the privacy policy).
 - `assets/img/og-card.png` embeds `iphone-roster-800.webp`; rerun `tools/make-og-card.sh`
   when that image changes.
 - Icons: export a 1024 × 1024 PNG from Icon Composer to `assets/icon-1024.png`, then run
